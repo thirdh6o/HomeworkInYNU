@@ -8,7 +8,7 @@ response = requests.post(
         "messages": [
             {
                 "role": "user",
-                "content": "给我几个英语单词供我练习?"
+                "content": "韩国历史上有过哪些有名的大统领?"
             }
         ],
         "stream": True
