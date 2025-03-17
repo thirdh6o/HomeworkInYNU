@@ -8,7 +8,7 @@ response = requests.post(
         "messages": [
             {
                 "role": "user",
-                "content": "韩国历史上有过哪些有名的大统领?"
+                "content": "6g的现状以及应用"
             }
         ],
         "stream": True
