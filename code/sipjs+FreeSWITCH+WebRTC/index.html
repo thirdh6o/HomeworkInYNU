@@ -67,7 +67,12 @@ myAddEvent(document.getElementById('loginButton'), 'click', function() {
     uri: sipUsername + '@' + sipDomain,
     ws_servers: wsServer,
     authorizationUser: authUsername,
-    password: sipPassword
+    password: sipPassword,
+    traceSip: true,
+    register: true,
+    userAgentString: 'SIPjs-Client',
+    hackViaTcp: true,
+    hackIpInContact: true
   };
 
   try {
