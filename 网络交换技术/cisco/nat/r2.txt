@@ -1,0 +1,28 @@
+/*=Part1  Router2 基本配置  */
+Router>enable
+Router#conf t
+Router(config)#hostname R2
+R2(config)#inter f0/0
+R2(config-if)#ip address 172.16.1.1 255.255.255.0     //配置f0/0接口
+R2(config-if)#no shutdown
+R2(config-if)#exit
+R2(config)#interface serial 2/0
+R2(config-if)#ip address 23.1.1.1 255.255.255.0       //配置s2/0接口
+R2(config-if)#no shutdown
+R2(config-if)#exit
+R2(config)#ip route 0.0.0.0 0.0.0.0 12.1.1.2          //默认向出口下一跳转发
+/*=Part2.1  端口映射配置  */
+R2(config)#inter f0/0
+R2(config-if)#ip nat inside         //定义内部接口
+R2(config-if)#exit  
+R2(config)#inter s2/0              
+R2(config-if)#ip nat outside        //定义外部接口
+R2(config-if)#exit
+R2(config)#ip nat inside source static tcp 172.16.1.100 80 23.1.1.1 80            //将Server2的内网IP80端口映射到外网IP80端口上
+/*=Part2.2  NAPT映射配置  */    
+//由于只有一个公网IP，此处将外部映射IP设置为外部接口上的IP
+R2(config)#access-list 5 permit 172.16.1.0 0.0.0.255                              //创建访问列表（应映射的内部网络）
+R2(config)#ip nat inside source list 5 interface Serial2/0 overload       //将访问列表与接口地址（单个IP）关联(开启“地址重载”)
+//命令另一种形式：ip nat inside source list 5 pool xxx overload           //即配置地址池只含1个外网接口的IP地址
+R2#show ip nat translations        //无记录显示
+R2#show r

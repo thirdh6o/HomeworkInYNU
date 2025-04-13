@@ -1,0 +1,20 @@
+/*=Part1  Router1 基本配置  */
+Router>enable
+Router#conf t
+Router(config)#hostname R1
+R1(config)#inter f0/0
+R1(config-if)#ip address 8.8.8.1 255.255.255.0     //配置f0/0接口IP
+R1(config-if)#no shutdown
+R1(config-if)#exit
+R1(config)#inter s2/0
+R1(config-if)#ip address 12.1.1.6 255.255.255.0    //配置s2/0接口IP
+R1(config-if)#clock rate 64000                     //必须配置时钟才可通信
+R1(config-if)#no shutdown
+R1(config-if)#exit
+R1(config)#inter s3/0
+R1(config-if)#ip address 23.1.1.2 255.255.255.0    //配置s3/0接口IP
+R1(config-if)#clock rate 64000                     //必须配置时钟才可通信
+R1(config-if)#no shutdown
+R1(config-if)#exit
+...
+//实际上，企业网管无法对ISP路由器进行配置，且运营商一般不做外部本地地址的路由转发，故此处不做其他相关配置。
