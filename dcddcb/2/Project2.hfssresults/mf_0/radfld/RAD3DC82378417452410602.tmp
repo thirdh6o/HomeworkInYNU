@@ -1,0 +1,28 @@
+$begin 'RFSM'
+	$begin 'RadSurfs'
+	$end 'RadSurfs'
+	$begin 'CustomSurfs'
+	$end 'CustomSurfs'
+	$begin 'SetupSolns'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=0, VersID=1, ParentID=26, VersID=0, Context='0:0', DesVarn='H=\'1.6mm\' L0=\'28mm\' L1=\'17.45mm\' L2=\'15mm\' W0=\'37.26mm\' W1=\'1.1mm\' W2=\'2.98mm\'', IntrVarn='Freq=\'2.45GHz\'')
+			SetupSolnFBOFile='107423784174524754149.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=0, VersID=1, ParentID=26, VersID=0, Context='0:0', DesVarn='H=\'1.6mm\' L0=\'30.21mm\' L1=\'17.45mm\' L2=\'15mm\' W0=\'37.26mm\' W1=\'1.16mm\' W2=\'2.98mm\'', IntrVarn='Freq=\'2.45GHz\'')
+			SetupSolnFBOFile='107423784174524754150.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=2, VersID=3, ParentID=26, VersID=0, Context='0:0', DesVarn='H=\'1.6mm\' L0=\'28mm\' L1=\'17.45mm\' L2=\'15mm\' W0=\'37.26mm\' W1=\'1.1mm\' W2=\'2.98mm\'', IntrVarn='Freq=\'2.45GHz\'')
+			SetupSolnFBOFile='132F23784174524775551.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=2, VersID=3, ParentID=26, VersID=0, Context='0:0', DesVarn='H=\'1.6mm\' L0=\'30.21mm\' L1=\'17.45mm\' L2=\'15mm\' W0=\'37.26mm\' W1=\'1.16mm\' W2=\'2.98mm\'', IntrVarn='Freq=\'2.45GHz\'')
+			SetupSolnFBOFile='133223784174524775652.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=4, VersID=5, ParentID=26, VersID=0, Context='0:0', DesVarn='H=\'1.6mm\' L0=\'28mm\' L1=\'17.45mm\' L2=\'15mm\' W0=\'37.26mm\' W1=\'1.1mm\' W2=\'2.98mm\'', IntrVarn='Freq=\'2.45GHz\'')
+			SetupSolnFBOFile='27C42004017452895061.tmp'
+		$end 'SetupSolnEntry'
+	$end 'SetupSolns'
+$end 'RFSM'
